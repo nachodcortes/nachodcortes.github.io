@@ -3,14 +3,20 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tu Destino Ideal - Viajes Inolvidables</title>
+    <title>ExoVoyages - Viajes Inolvidables a Asia y Europa</title> 
     <link rel="stylesheet" href="styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
 
     <header>
-        <h1>Tu Destino Ideal</h1>
-        <p>¡Explora el mundo con nosotros!</p>
+        <div class="logo">
+            <img src="img/logo.png" alt="Logo de ExoVoyages" style="display: none;"> 
+            <h1>ExoVoyages</h1>
+        </div>
+        <p>¡Explora Asia y Europa con experiencias únicas!</p>
     </header>
 
     <nav>
@@ -23,27 +29,121 @@
     </nav>
 
     <main>
-        <section id="inicio">
-            <h2>Bienvenido a Tu Destino Ideal</h2>
-            <p>Descubre los lugares más increíbles del planeta y planifica tu próxima aventura.</p>
+        <section id="inicio" class="hero-section">
+            <div class="hero-content">
+                <h2>Tu Aventura Comienza Aquí</h2>
+                <p>Descubre destinos que te cambiarán la perspectiva, mezclando cultura, tecnología, diversión y naturaleza.</p>
+                <a href="#destinos" class="btn-primary">Explorar Destinos</a>
+            </div>
             </section>
 
         <section id="destinos">
             <h2>Nuestros Destinos Destacados</h2>
-            </section>
+            <div class="destinos-grid-container">
+                <article class="destino-card">
+                    <img src="https://via.placeholder.com/300x200?text=Singapur" alt="Singapur">
+                    <h3>Singapur: La Ciudad Jardín del Futuro</h3>
+                    <p>Una metrópolis vibrante donde la tecnología y la naturaleza conviven en armonía. Explora sus jardines futuristas, su arquitectura innovadora y su deliciosa gastronomía.</p>
+                    <a href="#" class="btn-secondary">Ver Detalles</a>
+                </article>
+
+                <article class="destino-card">
+                    <img src="https://via.placeholder.com/300x200?text=Tailandia" alt="Tailandia">
+                    <h3>Tailandia: Templos, Playas y Selvas Exóticas</h3>
+                    <p>Desde los bulliciosos mercados de Bangkok hasta las tranquilas playas de Krabi y la exuberante naturaleza de Chiang Mai. Una experiencia cultural y natural inigualable.</p>
+                    <a href="#" class="btn-secondary">Ver Detalles</a>
+                </article>
+
+                <article class="destino-card">
+                    <img src="https://via.placeholder.com/300x200?text=Tokio" alt="Tokio">
+                    <h3>Tokio: Innovación y Tradición Milenaria</h3>
+                    <p>Sumérgete en la capital de Japón, donde la tecnología de vanguardia se fusiona con antiguos templos, vibrantes barrios y una cultura única.</p>
+                    <a href="#" class="btn-secondary">Ver Detalles</a>
+                </article>
+
+                <article class="destino-card">
+                    <img src="https://via.placeholder.com/300x200?text=Paris" alt="París">
+                    <h3>París: La Ciudad de la Luz, Arte y Romance</h3>
+                    <p>Descubre la magia de sus museos de clase mundial, sus icónicos monumentos, sus encantadores cafés y su inconfundible atmósfera romántica.</p>
+                    <a href="#" class="btn-secondary">Ver Detalles</a>
+                </article>
+
+                <article class="destino-card">
+                    <img src="https://via.placeholder.com/300x200?text=Budapest" alt="Budapest">
+                    <h3>Budapest: Perla del Danubio con Historia y Termas</h3>
+                    <p>Explora una de las capitales más bellas de Europa, con su impresionante arquitectura, sus famosos baños termales, su rica historia y su vibrante vida nocturna.</p>
+                    <a href="#" class="btn-secondary">Ver Detalles</a>
+                </article>
+
+                <article class="destino-card">
+                    <img src="https://via.placeholder.com/300x200?text=Amsterdam" alt="Ámsterdam">
+                    <h3>Ámsterdam: Canales, Arte y Espíritu Libre</h3>
+                    <p>Una ciudad única con sus pintorescos canales, museos de renombre (Van Gogh, Rijksmuseum), casas históricas y una atmósfera de tolerancia y creatividad.</p>
+                    <a href="#" class="btn-secondary">Ver Detalles</a>
+                </article>
+
+                <article class="destino-card">
+                    <img src="https://via.placeholder.com/300x200?text=Atenas" alt="Atenas">
+                    <h3>Atenas: Cuna de la Civilización Occidental</h3>
+                    <p>Viaja al pasado explorando sus sitios arqueológicos milenarios como la Acrópolis, pero también descubre una ciudad moderna y vibrante.</p>
+                    <a href="#" class="btn-secondary">Ver Detalles</a>
+                </article>
+            </div>
+        </section>
 
         <section id="reseñas">
             <h2>Lo que Dicen Nuestros Viajeros</h2>
-            </section>
+            <div class="reseñas-grid-container">
+                <article class="reseña-card">
+                    <img src="https://via.placeholder.com/80x80?text=Viajero1" alt="Foto de Viajero">
+                    <h4>Ana G. - Viaje a Tokio</h4>
+                    <p>"¡ExoVoyages hizo que mi viaje a Tokio fuera inolvidable! La mezcla de tradición y tecnología fue fascinante. ¡Volveré a viajar con ellos!"</p>
+                </article>
+                <article class="reseña-card">
+                    <img src="https://via.placeholder.com/80x80?text=Viajero2" alt="Foto de Viajera">
+                    <h4>Marco P. - Aventura en Tailandia</h4>
+                    <p>"Las playas de Tailandia fueron un sueño. La organización fue impecable, pudimos explorar templos y disfrutar de la naturaleza. ¡Gracias ExoVoyages!"</p>
+                </article>
+                <article class="reseña-card">
+                    <img src="https://via.placeholder.com/80x80?text=Viajero3" alt="Foto de Viajero">
+                    <h4>Sofía R. - Encanto de París</h4>
+                    <p>"Siempre quise conocer París y ExoVoyages superó mis expectativas. Museos, cafés, y una atmósfera mágica. ¡Experiencias que te cambian!"</p>
+                </article>
+                <article class="reseña-card">
+                    <img src="https://via.placeholder.com/80x80?text=Viajero4" alt="Foto de Viajera">
+                    <h4>Pablo V. - Explorando Singapur</h4>
+                    <p>"Singapur es increíble, y con ExoVoyages pude descubrir sus facetas más futuristas y sus pulmones verdes. ¡Totalmente recomendado!"</p>
+                </article>
+            </div>
+        </section>
 
         <section id="contacto">
             <h2>Contáctanos</h2>
-            </section>
+            <p>¿Listo para tu próxima aventura? Envíanos tus preguntas y te ayudaremos a planificar el viaje perfecto.</p>
+            
+            <div class="formulario-container">
+                <p>El formulario de contacto será añadido en un paso posterior.</p>
+            </div>
+
+            <h3>Encuéntranos en Google Maps (Ubicación de ejemplo)</h3>
+            <div class="map-container">
+                <iframe 
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3284.0168850654765!2d-58.3815923!3d-34.6036844!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x95bccac3c53b230f%3A0x6b4843d1a49f506!2sObelisco!5e0!3m2!1ses-419!2sar!4v1700000000000!5m2!1ses-419!2sar" 
+                    width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
+                </iframe>
+            </div>
+            <p>Nota: El mapa muestra la ubicación del Obelisco en Buenos Aires como un ejemplo.</p>
+        </section>
     </main>
 
     <footer>
-        <p>&copy; 2025 Tu Destino Ideal. Todos los derechos reservados.</p>
-        </footer>
+        <p>&copy; 2025 ExoVoyages. Todos los derechos reservados.</p>
+        <div class="social-links">
+            <a href="https://facebook.com/exovoyages" target="_blank">Facebook</a> | 
+            <a href="https://instagram.com/exovoyages" target="_blank">Instagram</a> | 
+            <a href="https://twitter.com/exovoyages" target="_blank">Twitter</a>
+        </div>
+    </footer>
 
 </body>
 </html>
