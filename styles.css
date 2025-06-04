@@ -101,7 +101,7 @@ nav ul li a:focus {
 /* --- Estilos del inicio --- */
 .hero-section {
     /* MANTEN AQUÍ TU IMAGEN DE FONDO REAL. ESTE ES UN PLACEHOLDER. */
-    background: url('https://via.placeholder.com/1500x600/F7D002/333?text=ExoVoyages') no-repeat center center/cover;
+    background: url('img/fujisha-japan.jpg') no-repeat center center/cover;
     
     color: var(--color-white);
     text-align: center;
