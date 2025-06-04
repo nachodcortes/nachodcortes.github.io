@@ -1,0 +1,140 @@
+/* Google Fonts */
+/* Poppins para títulos y Lato para el cuerpo del texto */
+@import url('https://fonts.googleapis.com/css2?family=Lato:wght@400;700&family=Poppins:wght@700&display=swap');
+
+/* --- Variables CSS paleta de colores --- */
+:root {
+    --color-primary: #F7D002; /* Amarillo vibrante */
+    --color-secondary: #28a745; /* Verde */
+    --color-dark-grey: #343a40; /* Gris oscuro r */
+    --color-medium-grey: #6c757d; /* Gris medio  */
+    --color-light-grey: #f0f0f0; /* Gris claro */
+    --color-cream: #FFF8E1; /* Crema suave  */
+    --color-white: #ffffff; /* Blanco puro */
+    --color-text-dark: #333; /* Negro */
+}
+
+/* --- Estilos generales --- */
+body {
+    font-family: 'Lato', sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    line-height: 1.6;
+    color: var(--color-text-dark); 
+    background-color: var(--color-cream); 
+}
+
+/* Estilos para todos los elementos */
+*, *::before, *::after {
+    box-sizing: inherit;
+}
+
+/* --- Estilos del Header --- */
+header {
+    background-color: var(--color-dark-grey); 
+    color: var(--color-white);
+    padding: 1.5rem 0; 
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+    display: flex; 
+    flex-direction: column; 
+    align-items: center; 
+    justify-content: center;
+}
+
+header h1 {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    font-size: 3.5rem; 
+    color: var(--color-primary); 
+    letter-spacing: 2px;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.4);
+}
+
+header p {
+    font-size: 1.2rem;
+    margin-top: 0.8rem;
+    color: var(--color-light-grey); 
+}
+
+/* Estilo para el contenedor del logo/titulo */
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 15px; 
+}
+
+/* --- Estilos de la navegacion --- */
+nav {
+    background-color: var(--color-dark-grey); 
+    padding: 1rem 0;
+    text-align: center;
+    border-top: 1px solid rgba(255,255,255,0.1); 
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    gap: 30px; 
+}
+
+nav ul li a {
+    color: var(--color-white);
+    text-decoration: none;
+    font-weight: 700;
+    padding: 0.7rem 1.5rem; 
+    transition: background-color 0.3s ease, color 0.3s ease;
+    border-radius: 8px; 
+    font-size: 1.1rem; /
+}
+
+nav ul li a:hover,
+nav ul li a:focus {
+    background-color: var(--color-primary); 
+    color: var(--color-dark-grey); 
+}
+
+/* --- Estilos del inicio --- */
+.hero-section {
+    /* MANTEN AQUÍ TU IMAGEN DE FONDO REAL. ESTE ES UN PLACEHOLDER. */
+    background: url('https://via.placeholder.com/1500x600/F7D002/333?text=ExoVoyages') no-repeat center center/cover;
+    
+    color: var(--color-white);
+    text-align: center;
+    padding: 10rem 2rem; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 500px; 
+    position: relative;
+    box-shadow: inset 0 0 50px rgba(0,0,0,0.5); 
+}
+
+.hero-section::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5); 
+    z-index: 1;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+    max-width: 900px; 
+    margin: 0 auto;
+}
+
+.hero-content h2 {
+    font-family: 'Poppins', sans-serif;
+    font-size: 4rem; 
+    margin-bottom: 1rem;
+    color: var(--color-primary); 
+    text-shadow: 3px 3px 6
