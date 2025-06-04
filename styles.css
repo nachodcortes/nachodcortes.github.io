@@ -37,6 +37,7 @@ header {
     padding: 1.5rem 0; 
     text-align: center;
     box-shadow: 0 4px 8px rgba(0,0,0,0.3);
+    margin-bottom: -1px;
     display: flex; 
     flex-direction: column; 
     align-items: center; 
@@ -103,11 +104,11 @@ nav ul li a:focus {
     background: url('img/fujisha-japan.jpg') no-repeat center center/cover;
     color: var(--color-white);
     text-align: center;
-    padding: 10rem 2rem; 
+    padding: 7rem 2rem; 
     display: flex;
     align-items: center;
     justify-content: center;
-    min-height: 500px; 
+    min-height: 400px; 
     position: relative;
     box-shadow: inset 0 0 50px rgba(0,0,0,0.5); 
 }
