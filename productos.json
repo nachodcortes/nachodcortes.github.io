@@ -1,0 +1,50 @@
+[
+  {
+    "id": 1,
+    "nombre": "Singapur",
+    "precio": 1200,
+    "imagen": "img/singapour.jpg"
+  },
+  {
+    "id": 2,
+    "nombre": "Tailandia",
+    "precio": 1700,
+    "imagen": "img/Bangkok.jpg"
+  },
+  {
+    "id": 3,
+    "nombre": "Tokio",
+    "precio": 2200,
+    "imagen": "img/tokio.jpg"
+  },
+  {
+    "id": 4,
+    "nombre": "Seul",
+    "precio": 2100,
+    "imagen": "img/seul.jpg"
+  },
+  {
+    "id": 5,
+    "nombre": "Paris",
+    "precio": 1500,
+    "imagen": "img/paris.jpg"
+  },
+  {
+    "id": 6,
+    "nombre": "Budapest",
+    "precio": 1300,
+    "imagen": "img/budapest.jpg"
+  },
+  {
+    "id": 7,
+    "nombre": "Amsterdam",
+    "precio": 1800,
+    "imagen": "img/amsterdam.jpg"
+  },
+  {
+    "id": 8,
+    "nombre": "Atenas",
+    "precio": 1400,
+    "imagen": "img/atenas.jpg"
+  },
+]
