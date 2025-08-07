@@ -1,44 +1,71 @@
 document.addEventListener("DOMContentLoaded", () => {
   const contenedor = document.querySelector(".productos-container");
   const tablaBody = document.querySelector("#carrito-items");
-  const totalSpan = document.querySelector("#total");
+  const totalSpan = document.querySelector("#carrito-total");
   const vaciarBtn = document.querySelector("#vaciar-carrito");
+  const comprarBtn = document.querySelector("#comprar");
   let carrito = JSON.parse(localStorage.getItem("carrito")) || [];
 
-  // Mostrar productos
+  // Cargar productos y renderizar cards
   fetch("productos.json")
     .then(res => res.json())
     .then(productos => {
-      productos.forEach(producto => {
-        const card = document.createElement("div");
-        card.classList.add("producto-card");
+      renderizarCards(productos);
+      renderizarCarrito(productos);
 
-        card.innerHTML = `
-          <img src="${producto.imagen}" alt="${producto.nombre}">
-          <h3>${producto.nombre}</h3>
-          <p>${producto.descripcion}</p>
-          <p class="precio">Precio: $${producto.precio}</p>
-          <button class="btn-agregar" data-id="${producto.id}">Agregar al carrito</button>
-        `;
-
-        contenedor.appendChild(card);
-      });
-
-      // Botones agregar
-      document.querySelectorAll(".btn-agregar").forEach(boton => {
-        boton.addEventListener("click", e => {
-          const id = parseInt(e.target.getAttribute("data-id"));
-          agregarAlCarrito(id);
+      if (contenedor) {
+        document.querySelectorAll(".btn-agregar").forEach(boton => {
+          boton.addEventListener("click", e => {
+            const id = parseInt(e.target.getAttribute("data-id"));
+            agregarAlCarrito(id);
+            renderizarCarrito(productos);
+          });
         });
-      });
-
-      // Mostrar carrito si existe
-      if (tablaBody) {
-        mostrarCarrito(productos);
       }
-    })
-    .catch(err => console.error("Error al cargar productos:", err));
 
+      // Botón vaciar
+      if (vaciarBtn) {
+        vaciarBtn.addEventListener("click", () => {
+          carrito = [];
+          localStorage.setItem("carrito", JSON.stringify(carrito));
+          renderizarCarrito(productos);
+        });
+      }
+
+      // Botón comprar
+      if (comprarBtn) {
+        comprarBtn.addEventListener("click", () => {
+          if (carrito.length === 0) {
+            alert("Tu carrito está vacío.");
+          } else {
+            alert("¡Gracias por tu compra!");
+            carrito = [];
+            localStorage.setItem("carrito", JSON.stringify(carrito));
+            renderizarCarrito(productos);
+          }
+        });
+      }
+    });
+
+  // Crear las tarjetas de productos
+  function renderizarCards(productos) {
+    productos.forEach(producto => {
+      const card = document.createElement("div");
+      card.classList.add("producto-card");
+
+      card.innerHTML = `
+        <img src="${producto.imagen}" alt="${producto.nombre}">
+        <h3>${producto.nombre}</h3>
+        <p>${producto.descripcion}</p>
+        <p class="precio">Precio: $${producto.precio}</p>
+        <button class="btn-agregar" data-id="${producto.id}">Agregar al carrito</button>
+      `;
+
+      contenedor.appendChild(card);
+    });
+  }
+
+  // Agregar producto al carrito
   function agregarAlCarrito(id) {
     const index = carrito.findIndex(p => p.id === id);
     if (index >= 0) {
@@ -47,14 +74,16 @@ document.addEventListener("DOMContentLoaded", () => {
       carrito.push({ id, cantidad: 1 });
     }
     localStorage.setItem("carrito", JSON.stringify(carrito));
-    alert("Producto agregado al carrito");
   }
 
-  function mostrarCarrito(productos) {
+  // Renderizar el carrito
+  function renderizarCarrito(productos) {
+    if (!tablaBody) return;
+
     tablaBody.innerHTML = "";
 
     if (carrito.length === 0) {
-      tablaBody.innerHTML = `<tr><td colspan="5">Tu carrito está vacío</td></tr>`;
+      tablaBody.innerHTML = `<tr><td colspan="6">Tu carrito está vacío</td></tr>`;
       totalSpan.textContent = "0.00";
       return;
     }
@@ -71,7 +100,7 @@ document.addEventListener("DOMContentLoaded", () => {
         <td><img src="${producto.imagen}" alt="${producto.nombre}"></td>
         <td>${producto.nombre}</td>
         <td>$${producto.precio}</td>
-        <td>${item.cantidad}</td>
+        <td><input type="number" min="1" value="${item.cantidad}" data-id="${item.id}" class="input-cantidad"></td>
         <td>$${subtotal.toFixed(2)}</td>
         <td><button data-id="${item.id}" class="btn-eliminar">Eliminar</button></td>
       `;
@@ -80,31 +109,31 @@ document.addEventListener("DOMContentLoaded", () => {
 
     totalSpan.textContent = total.toFixed(2);
 
-    // Eventos de eliminar
+    // Eventos eliminar
     document.querySelectorAll(".btn-eliminar").forEach(boton => {
       boton.addEventListener("click", e => {
         const id = parseInt(e.target.getAttribute("data-id"));
-        eliminarProducto(id);
+        carrito = carrito.filter(p => p.id !== id);
+        localStorage.setItem("carrito", JSON.stringify(carrito));
+        renderizarCarrito(productos);
+      });
+    });
+
+    // Eventos input cantidad
+    document.querySelectorAll(".input-cantidad").forEach(input => {
+      input.addEventListener("change", e => {
+        const id = parseInt(e.target.getAttribute("data-id"));
+        const nuevaCantidad = parseInt(e.target.value);
+        if (nuevaCantidad <= 0) return;
+        const index = carrito.findIndex(p => p.id === id);
+        carrito[index].cantidad = nuevaCantidad;
+        localStorage.setItem("carrito", JSON.stringify(carrito));
+        renderizarCarrito(productos);
       });
     });
   }
 
-  function eliminarProducto(id) {
-    carrito = carrito.filter(p => p.id !== id);
-    localStorage.setItem("carrito", JSON.stringify(carrito));
-    location.reload();
-  }
-
-  // Vaciar carrito
-  if (vaciarBtn) {
-    vaciarBtn.addEventListener("click", () => {
-      carrito = [];
-      localStorage.setItem("carrito", JSON.stringify(carrito));
-      location.reload();
-    });
-  }
-
-  // Validación de formulario de contacto
+  // Validación formulario de contacto
   const form = document.querySelector(".contact-form");
   if (form) {
     form.addEventListener("submit", e => {
@@ -119,3 +148,4 @@ document.addEventListener("DOMContentLoaded", () => {
     });
   }
 });
+
