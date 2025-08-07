@@ -38,7 +38,32 @@
             <h2>Nuestros Destinos Destacados</h2>
             <div class="productos-container destinos-grid-container"></div>
         </section>
+
+        <section id="carrito">
+          <h2>Tu Carrito</h2>
+          <div class="carrito-container">
+            <table class="carrito-tabla">
+              <thead>
+                <tr>
+                  <th>Producto</th>
+                  <th>Precio</th>
+                  <th>Cantidad</th>
+                  <th>Subtotal</th>
+                  <th></th>
+                </tr>
+              </thead>
+              <tbody id="carrito-items">
+                  
+              </tbody>
+            </table>
         
+            <div class="carrito-total">
+              <p>Total: $<span id="carrito-total">0</span></p>
+              <button id="vaciar-carrito" class="btn-secondary">Vaciar Carrito</button>
+            </div>
+          </div>
+        </section>
+
         <section id="reseñas">
             <h2>Lo que Dicen Nuestros Viajeros</h2>
             <div class="reseñas-grid-container">
@@ -64,7 +89,7 @@
                 </article>
             </div>
         </section>
-
+        
         <section id="contacto">
             <h2>Contáctanos</h2>
             <p>¿Listo para tu próxima aventura? Envíanos tus preguntas y te ayudaremos a planificar el viaje perfecto.</p>
@@ -97,31 +122,6 @@
                     width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade">
                 </iframe>
             </div>
-        </section>
-        
-        <section id="carrito">
-          <h2>Tu Carrito</h2>
-          <div class="carrito-container">
-            <table class="carrito-tabla">
-              <thead>
-                <tr>
-                  <th>Producto</th>
-                  <th>Precio</th>
-                  <th>Cantidad</th>
-                  <th>Subtotal</th>
-                  <th></th>
-                </tr>
-              </thead>
-              <tbody id="carrito-items">
-                <!-- Acá se insertan los productos con JavaScript -->
-              </tbody>
-            </table>
-        
-            <div class="carrito-total">
-              <p>Total: $<span id="carrito-total">0</span></p>
-              <button id="vaciar-carrito" class="btn-secondary">Vaciar Carrito</button>
-            </div>
-          </div>
         </section>
 
     </main>
