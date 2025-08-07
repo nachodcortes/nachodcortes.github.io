@@ -1,6 +1,6 @@
 document.addEventListener("DOMContentLoaded", () => {
   const contenedor = document.querySelector(".productos-container");
-  const tablaBody = document.querySelector("#carrito-body");
+  const tablaBody = document.querySelector("#carrito-items");
   const totalSpan = document.querySelector("#total");
   const vaciarBtn = document.querySelector("#vaciar-carrito");
   let carrito = JSON.parse(localStorage.getItem("carrito")) || [];
