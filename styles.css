@@ -610,3 +610,87 @@ section h2::after {
     background-color: #218838;
     transform: translateY(-2px);
 }
+
+/* === Estilos para el carrito === */
+
+.carrito-container {
+    background-color: var(--color-white);
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+    max-width: 1000px;
+    margin: 0 auto;
+    overflow-x: auto;
+}
+
+.carrito-tabla {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 2rem;
+    font-size: 1rem;
+}
+
+.carrito-tabla thead {
+    background-color: var(--color-primary);
+    color: var(--color-dark-grey);
+}
+
+.carrito-tabla th,
+.carrito-tabla td {
+    padding: 1rem;
+    text-align: center;
+    border-bottom: 1px solid var(--color-light-grey);
+}
+
+.carrito-tabla td img {
+    width: 60px;
+    height: 60px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.carrito-total {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.carrito-total p {
+    font-size: 1.3rem;
+    font-weight: bold;
+    color: var(--color-dark-grey);
+    margin: 0;
+}
+
+#vaciar-carrito {
+    margin-top: 1rem;
+    font-size: 1rem;
+    padding: 0.8rem 1.5rem;
+    background-color: var(--color-medium-grey);
+    color: var(--color-white);
+    border: none;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#vaciar-carrito:hover {
+    background-color: #5a6268;
+}
+
+/* Ajustes para botones dentro de tabla */
+.carrito-tabla button {
+    background-color: var(--color-secondary);
+    color: white;
+    border: none;
+    padding: 0.4rem 0.8rem;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.2s ease;
+}
+
+.carrito-tabla button:hover {
+    background-color: #218838;
+}
