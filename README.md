@@ -5,3 +5,4 @@ Posee un inicio, una zona con los destinos, reseñas de viajeros y una zona de c
 **Tecnologías Utilizadas:**
 * HTML5 (Estructura semantica)
 * CSS3 (Estilos y diseño)
+* JavaScript (Interactividad, validacion de formularios y carrito)
