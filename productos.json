@@ -1,50 +1,58 @@
 [
   {
     "id": 1,
-    "nombre": "Singapur",
-    "precio": 1200,
+    "nombre": "Singapur: La ciudad jardin del futuro",
+    "descripcion": "Una metrópolis vibrante donde la tecnología y la naturaleza conviven en armonía. Explora sus jardines futuristas, su arquitectura innovadora y su deliciosa gastronomía.",
+    "precio": 2500,
     "imagen": "img/singapour.jpg"
   },
   {
     "id": 2,
-    "nombre": "Tailandia",
-    "precio": 1700,
+    "nombre": "Tailandia: Templos, playas y selvas exóticas",
+    "descripcion": "Desde los bulliciosos mercados de Bangkok hasta las tranquilas playas de Krabi y la exuberante naturaleza de Chiang Mai. Una experiencia cultural y natural inigualable.",
+    "precio": 1900,
     "imagen": "img/Bangkok.jpg"
   },
   {
     "id": 3,
-    "nombre": "Tokio",
+    "nombre": "Tokio: Innovación y tradición milenaria",
+    "descripcion": "Sumérgete en la capital de Japón, donde la tecnología de vanguardia se fusiona con antiguos templos, vibrantes barrios y una cultura única.",
     "precio": 2200,
     "imagen": "img/tokio.jpg"
   },
   {
     "id": 4,
-    "nombre": "Seul",
-    "precio": 2100,
+    "nombre": "Seul: Dinamismo moderno y tesoros culturales",
+    "descripcion": "Descubre la fascinante capital de Corea del Sur, una metrópolis vibrante que combina rascacielos futuristas con palacios históricos, mercados bulliciosos y una deliciosa gastronomía.",
+    "precio": 2400,
     "imagen": "img/seul.jpg"
   },
   {
     "id": 5,
-    "nombre": "Paris",
-    "precio": 1500,
+    "nombre": "París: La ciudad de la luz, arte y romance",
+    "descripcion": "Descubre la magia de sus museos de clase mundial, sus icónicos monumentos, sus encantadores cafés y su inconfundible atmósfera romántica.",
+    "precio": 1800,
     "imagen": "img/paris.jpg"
   },
   {
     "id": 6,
-    "nombre": "Budapest",
-    "precio": 1300,
+    "nombre": "Budapest: Perla del Danubio con historia y termas",
+    "descripcion": "Explora una de las capitales más bellas de Europa, con su impresionante arquitectura, sus famosos baños termales, su rica historia y su vibrante vida nocturna.",
+    "precio": 1200,
     "imagen": "img/budapest.jpg"
   },
   {
     "id": 7,
-    "nombre": "Amsterdam",
-    "precio": 1800,
+    "nombre": "Ámsterdam: Canales, arte y espíritu libre",
+    "descripcion": "Una ciudad única con sus pintorescos canales, museos de renombre (Van Gogh, Rijksmuseum), casas históricas y una atmósfera de tolerancia y creatividad.",
+    "precio": 1700,
     "imagen": "img/amsterdam.jpg"
   },
   {
     "id": 8,
-    "nombre": "Atenas",
-    "precio": 1400,
+    "nombre": "Atenas: Cuna de la civilización occidental",
+    "descripcion": "Viaja al pasado explorando sus sitios arqueológicos milenarios como la Acrópolis, pero también descubre una ciudad moderna y vibrante.",
+    "precio": 1600,
     "imagen": "img/atenas.jpg"
-  },
+  }
 ]
