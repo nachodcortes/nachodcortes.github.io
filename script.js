@@ -12,14 +12,15 @@ document.addEventListener("DOMContentLoaded", () => {
         card.innerHTML = `
           <img src="${producto.imagen}" alt="${producto.nombre}">
           <h3>${producto.nombre}</h3>
-          <p>Precio: $${producto.precio}</p>
+          <p>${producto.descripcion}</p>
+          <p class="precio">Precio: $${producto.precio}</p>
           <button class="btn-agregar" data-id="${producto.id}">Agregar al carrito</button>
         `;
 
         contenedor.appendChild(card);
       });
 
-      // agregar evento a los botones
+      // botones "Agregar al carrito"
       const botones = document.querySelectorAll(".btn-agregar");
       botones.forEach(boton => {
         boton.addEventListener("click", (e) => {
@@ -32,7 +33,7 @@ document.addEventListener("DOMContentLoaded", () => {
       console.error("Error al cargar productos:", err);
     });
 
-  // agregar al carrito usando localStorage
+  // guardar en localStorage
   function agregarAlCarrito(id) {
     const carrito = JSON.parse(localStorage.getItem("carrito")) || [];
     carrito.push(id);
@@ -40,7 +41,7 @@ document.addEventListener("DOMContentLoaded", () => {
     alert("Producto agregado al carrito");
   }
 
-  // validacion de formulario
+  // validacion del formulario de contacto
   const form = document.querySelector(".contact-form");
   if (form) {
     form.addEventListener("submit", function (e) {
