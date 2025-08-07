@@ -98,6 +98,32 @@
                 </iframe>
             </div>
         </section>
+        
+        <section id="carrito">
+          <h2>Tu Carrito</h2>
+          <div class="carrito-container">
+            <table class="carrito-tabla">
+              <thead>
+                <tr>
+                  <th>Producto</th>
+                  <th>Precio</th>
+                  <th>Cantidad</th>
+                  <th>Subtotal</th>
+                  <th></th>
+                </tr>
+              </thead>
+              <tbody id="carrito-items">
+                <!-- Acá se insertan los productos con JavaScript -->
+              </tbody>
+            </table>
+        
+            <div class="carrito-total">
+              <p>Total: $<span id="carrito-total">0</span></p>
+              <button id="vaciar-carrito" class="btn-secondary">Vaciar Carrito</button>
+            </div>
+          </div>
+        </section>
+
     </main>
 
     <script src="script.js"></script>
